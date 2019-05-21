@@ -42,10 +42,14 @@ function userlanguages(arr){
             str += arr[i].fname+" "+arr[i].lname+" interests include ";
             for( interest in arr[i].interests){
                 str += arr[i].interests
-                // console.log("The interest is: "+interest);
+
             }
     }
     return str
 
 }
 console.log(userlanguages(users));
+
+// y = users[0].fname+" " +users[0].lname+ " interests include " +users[0].interests
+y = users[0].fname+" " +users[0].lname+ " interests include " +users[0].interests.music+ " " +users[0].interests.dance+ " " +users[0].interests.television
+console.log(y)

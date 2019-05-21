@@ -47,3 +47,5 @@ Thumbs.db
 *.rar
 *.tar
 *.gzip
+
+package.json/
