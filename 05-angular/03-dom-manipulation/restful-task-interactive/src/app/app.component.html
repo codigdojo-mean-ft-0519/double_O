@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="title">
+    <h1>
+      {{ title }}
+    </h1>
+  </div>
+  <div class="tasks-holder">
+    <button class="getbutton" (click)="buttonGetAllTasks()">GET ALL TASKS</button>
+    <div *ngIf="tasks">
+      <div *ngFor="let task of tasks">
+        <div class="row">
+          <div class="col-75">
+            <p>{{task?.title }} - {{ task?.description}}</p>
+          </div>
+          <div class="col-25">
+            <button class="round" (click)="buttonShowOneTask(task)">SHOW</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="selectedTask">
+    <div class="single-task">
+      <h3>{{selectedTask?.title}}</h3>
+      <p>{{selectedTask?.description}}</p>
+    </div>
+  </div>
+</div>
